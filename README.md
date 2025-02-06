@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+# Project Setup with PNPM
+
+Follow these steps to set up and run the project using PNPM.
+
+## **1. Install PNPM Globally**
+
+To install PNPM globally, run:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install -g pnpm
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **2. Install dependencies**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run the development server:
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000) and interact with the development server/ App - restar needed sometimes to see CSS changes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Project Stack Documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **Frameworks and Tools Overview**
 
-## Deploy on Vercel
+### **Frontend & Fullstack Framework: Next.js**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-   **Reason:** Provides both frontend and backend capabilities in a single framework.
+-   **Benefits:**
+    -   Server-Side Rendering (SSR) and Static Site Generation (SSG)
+    -   File-based routing
+    -   Optimized performance for SEO and fast page loads
+    -   API routes for backend operations
+    <!-- - **Version:** //TODO: check version -->
+-   **Documentation:** [https://nextjs.org/docs](https://nextjs.org/docs)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **Database & ORM: Prisma**
+
+-   **Reason:** Type-safe and developer-friendly interaction with the PostgreSQL database.
+-   **Benefits:**
+    -   Auto-generated type-safe client for database queries
+    -   Database schema migrations
+    -   Support for relational data
+    <!-- - **Version:** //TODO: check version -->
+-   **Documentation:** [https://www.prisma.io/docs](https://www.prisma.io/docs)
+
+### **Styling: Tailwind CSS**
+
+-   **Reason:** Utility-first CSS framework for rapid UI development.
+-   **Benefits:**
+    -   Consistent styling through utility classes
+    -   Custom theming support
+    -   Responsive and mobile-friendly design
+    <!-- - **Version:** //TODO: check version -->
+-   **Documentation:** [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
+
+### **Testing: Jest**
+
+-   **Reason:** Comprehensive testing framework for unit and integration tests.
+-   **Benefits:**
+    -   Snapshot testing
+    -   Mocking capabilities
+    -   Watch mode for continuous testing
+    <!-- - **Version:** //TODO: check version -->
+-   **Documentation:** [https://jestjs.io/docs](https://jestjs.io/docs)
+
+## **Additional Tools**
+
+-   **React Query:** Efficient data fetching and caching.
+-   **PostgreSQL:** Reliable and scalable relational database.
+-   **ESLint & Prettier:** Ensure code consistency and linting.
+
+## **Project Structure**
+
+```bash
+src/
+├── app/                      # Next.js app directory for routes
+│   ├── api/                  # API routes for backend operations
+│   └── pages/                # Static and dynamic pages
+├── components/                # Reusable UI components
+├── lib/                       # Shared utilities and database connection
+├── prisma/                    # Prisma schema and migrations
+├── services/                  # Business logic layer
+├── styles/                    # Global and component-specific styles
+├── utils/                     # Helper functions
+└── tests/
+```
+
+This structure provides a scalable and maintainable codebase for your tennis court booking application.
