@@ -88,7 +88,6 @@ src/
 ├── lib/                       # Shared utilities and database connection
 ├── prisma/                    # Prisma schema and migrations
 ├── services/                  # Business logic layer
-├── styles/                    # Global and component-specific styles
 ├── utils/                     # Helper functions
 └── tests/
 ```
