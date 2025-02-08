@@ -92,4 +92,4 @@ src/
 └── tests/
 ```
 
-This structure provides a scalable and maintainable codebase for your tennis court booking application.
+This structure provides a scalable and maintainable codebase for the tennis court booking application. 
